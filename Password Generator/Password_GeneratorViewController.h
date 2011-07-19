@@ -10,6 +10,15 @@
 
 @interface Password_GeneratorViewController : UIViewController {
     
+    IBOutlet UISwitch *capitalLetters;
+    IBOutlet UISwitch *specialLetters;
+    IBOutlet UISwitch *numericLetters;
+    IBOutlet UISlider *adjustLength;
+    IBOutlet UILabel *passwordSuggestion;
+    IBOutlet UILabel *lblLength;
 }
+- (IBAction)lengthChanged:(id)sender;
+- (IBAction)generatePassword:(id)sender;
+- (void) updateLengthLabel;
 
 @end
